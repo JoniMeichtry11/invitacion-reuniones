@@ -1,14 +1,21 @@
+@if (isLoading) {
+  <div class="loading-overlay">
+    <div class="loader"></div>
+    <p>Cargando datos...</p>
+  </div>
+}
+
 <h1>Asistencia a las reuniones</h1>
 
 <form [formGroup]="attendanceForm" (ngSubmit)="downloadPDF()">
   <div>
     <label for="congregationName">Nombre de la congregación <span class="required">*</span>:</label>
-    <input type="text" id="congregationName" formControlName="congregationName" placeholder="Ingrese el nombre de la congregación" required>
+    <input type="text" id="congregationName" formControlName="congregationName" placeholder="Ingrese el nombre de la congregación" required (blur)="onBlur()">
   </div>
 
   <div>
     <label for="month">Mes <span class="required">*</span>:</label>
-    <input type="text" id="month" formControlName="month" placeholder="Ingrese el mes (ej: Enero 2026)" required>
+    <input type="text" id="month" formControlName="month" placeholder="Ingrese el mes (ej: Enero 2026)" required (blur)="onBlur()">
   </div>
 
   <h2>Asistencia por semana</h2>
