@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+* {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 8px;
+}
+
+div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.required {
+  color: #ff0000;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #000000;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #000000;
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}
+
+input::placeholder {
+  color: #666666;
+  font-style: italic;
+}
+
+input[readonly] {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+th, td {
+  border: 1px solid #000000;
+  padding: 12px;
+  text-align: center;
+  color: #000000;
+}
+
+th {
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+td input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  background-color: transparent;
+  color: #000000;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #333333;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #000000;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+// Responsive design for mobile
+@media (max-width: 600px) {
+  form {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  input {
+    padding: 18px;
+    font-size: 20px;
+  }
+
+  .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    font-size: 16px;
+    min-width: 500px;
+  }
+
+  th, td {
+    padding: 15px;
+  }
+
+  td input {
+    padding: 12px;
+    font-size: 20px;
+  }
+
+  button {
+    padding: 20px;
+    font-size: 22px;
+  }
+}
